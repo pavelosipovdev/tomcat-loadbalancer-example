@@ -1,0 +1,5 @@
+---
+roles:
+  - name: bootstrap
+collections:
+  - name: community.general

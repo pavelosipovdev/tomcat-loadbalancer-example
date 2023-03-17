@@ -1,0 +1,5 @@
+---
+roles:
+  - name: bootstrap
+  - name: epel
+collections:

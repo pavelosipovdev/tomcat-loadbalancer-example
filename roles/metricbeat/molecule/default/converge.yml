@@ -1,0 +1,12 @@
+---
+- name: converge
+  hosts: all
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - role: ansible-role-metricbeat
+      metricbeat_elasticsearch_password: "changeme"
+      metricbeat_modules:
+        - name: system
+          state: enabled

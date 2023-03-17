@@ -1,0 +1,28 @@
+# LEMP PLAYBOOK
+---
+- name: Prepare
+  hosts: all
+  become: true
+  tags: "test"
+  gather_facts: false
+  roles:
+    - bootstrap
+    - core_dependencies
+    - java
+    - epel
+    - elastic_repo
+
+- name: Install and Run
+  hosts: all
+  become: true
+  gather_facts: false
+  vars:
+    grafana_security:
+      admin_user: admin
+      admin_password: changeme
+  roles:
+    - elasticsearch
+    - grafana
+    - metricbeat
+    - nginx
+    - tomcat

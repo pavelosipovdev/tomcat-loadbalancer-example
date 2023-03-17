@@ -1,0 +1,4 @@
+---
+roles:
+  - name: bootstrap
+  - name: core_dependencies

@@ -1,0 +1,7 @@
+---
+roles:
+  - name: bootstrap
+  - name: core_dependencies
+  - name: java
+  - name: service
+collections:

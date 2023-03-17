@@ -1,0 +1,14 @@
+---
+# vars file for elasticsearch
+
+_elasticsearch_packages:
+  oss:
+    - elasticsearch-oss
+  elastic:
+    - elasticsearch
+
+elasticsearch_packages: "{{ _elasticsearch_packages[elasticsearch_type] }}"
+
+elasticsearch_user: "elastic"
+
+elasticsearch_pass: "changeme"
